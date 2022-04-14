@@ -7,4 +7,50 @@
 body {
   margin: 0.5rem 1rem;
   font-family: sans-serif;
+  background-color: #f5f7fb;
+}
+
+/* App */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Question */
+
+.question {
+  color: #293264;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+/* AnswerOption */
+
+.answer-option {
+  background: none;
+  border-radius: 8px;
+  width: 66px;
+  height: 21px;
+
+  font-size: 12px;
+  color: #293264;
+  cursor: pointer;
+  border: 0.8px solid #4d5b91;
+
+  margin-top: 12px;
+  margin-right: 13px;
+  margin-bottom: 15px;
+}
+
+/* QA */
+
+.qa-hr {
+  color: #f5f7fb;
+  outline: none;
+  height: 0.8px;
+  width: 400px;
 }

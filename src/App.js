@@ -1,6 +1,11 @@
 import React from "react";
+import QA from "./QA";
 import "./style.css";
 
 export default function App() {
-  return <h1>App goes here</h1>;
+  return (
+    <main className="main">
+      <QA />
+    </main>
+  );
 }
