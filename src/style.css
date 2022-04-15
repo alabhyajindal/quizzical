@@ -54,11 +54,18 @@ body {
 
 /* Quiz */
 
-.qa-hr {
+.quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.divider {
   color: #f5f7fb;
   outline: none;
   height: 0.8px;
-  width: 400px;
+  width: 700px;
 }
 
 .answers-cont {

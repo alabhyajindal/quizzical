@@ -1,57 +1,50 @@
 export const DATA = [
   {
-    category: "Entertainment: Books",
-    type: "multiple",
-    difficulty: "hard",
-    question:
-      "In the &quot;Harry Potter&quot; series, what is Headmaster Dumbledore&#039;s full name?",
-    correct_answer: "Albus Percival Wulfric Brian Dumbledore",
-    incorrect_answers: [
-      "Albus Valum Jetta Mobius Dumbledore",
-      "Albus James Lunae Otto Dumbledore",
-      "Albus Valencium Horatio Kul Dumbledore",
-    ],
-  },
-  {
-    category: "Mythology",
-    type: "multiple",
-    difficulty: "medium",
-    question: "According to the Egyptian Myth of Osiris, who murdered Osiris?",
-    correct_answer: "Set",
-    incorrect_answers: ["Horus", "Ra", "Anhur"],
-  },
-  {
-    category: "Entertainment: Japanese Anime & Manga",
+    category: "History",
     type: "multiple",
     difficulty: "medium",
     question:
-      "Who voices the character &quot;Reigen&quot; in the English dub of &quot;Mob Psycho 100&quot;?",
-    correct_answer: "Chris Niosi",
-    incorrect_answers: ["Max Mittelman", "Kyle McCarley", "Casey Mongillo"],
+      "When was the United States National Security Agency established?",
+    correct_answer: "November 4, 1952",
+    incorrect_answers: ["July 26, 1908", " July 1, 1973", " November 25, 2002"],
   },
   {
-    category: "Entertainment: Books",
+    category: "Politics",
     type: "multiple",
-    difficulty: "hard",
+    difficulty: "medium",
     question:
-      "In the book series &quot;Odd Thomas&quot;, Danny Jessup has what genetic disease? ",
-    correct_answer: " Osteogenesis Imperfecta",
+      "Due to the Nagoya Resolution, China agreed to allow Taiwan to compete separately in international sporting events under what name?",
+    correct_answer: "Chinese Taipei",
     incorrect_answers: [
-      "Spinocerebellar ataxia",
-      "Adrenoleukodystrophy",
-      "Cystic Fibrosis",
+      "Chinese Taiwan",
+      "Republic of Taiwan",
+      "Republic of Taipei ",
     ],
   },
   {
     category: "Entertainment: Video Games",
     type: "multiple",
-    difficulty: "medium",
-    question: "Which of the following games has the most playable characters?",
-    correct_answer: "Timesplitters: Future Perfect",
-    incorrect_answers: [
-      "Mortal Kombat: Armageddon",
-      "Marvel Vs. Capcom 2",
-      "Dragon Ball Z: Budokai Tenkaichi 3",
-    ],
+    difficulty: "easy",
+    question:
+      "Which of these is NOT a playable character in the 2016 video game Overwatch?",
+    correct_answer: "Invoker",
+    incorrect_answers: ["Mercy", "Winston", "Zenyatta"],
+  },
+  {
+    category: "History",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "Which modern day country is the region that was known as Phrygia in ancient times?",
+    correct_answer: "Turkey",
+    incorrect_answers: ["Syria", "Greece", "Egypt"],
+  },
+  {
+    category: "Entertainment: Film",
+    type: "multiple",
+    difficulty: "hard",
+    question: "In the Friday The 13th series, what year did Jason drown in?",
+    correct_answer: "1957",
+    incorrect_answers: ["1955", "1953", "1959"],
   },
 ];
