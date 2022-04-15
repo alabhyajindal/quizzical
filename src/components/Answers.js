@@ -3,19 +3,12 @@ import AnswerOption from "./AnswerOption";
 import { nanoid } from "nanoid";
 
 export default function Answers(props) {
-  const answerText = props.answersData.map((answerData) => {
-    return answerData.answer;
-  });
-
-  // console.log(props.answersData);
-
-  const answerElements = answerText.map((answer) => {
+  const answerElements = props.answersData.map((answers) => {
     return (
       <AnswerOption
         key={nanoid()}
-        text={answer}
         selectAnswer={props.selectAnswer}
-        answersData={props.answersData}
+        individualData={answers}
       />
     );
   });
