@@ -3,9 +3,8 @@ import { decode } from "../Quiz";
 
 export default function AnswerOption(props) {
   let styles;
-  if (props.individualData.isCorrect) {
+  if (props.individualData.isSelected) {
     styles = {
-      color: "#293264",
       backgroundColor: "#d6dbf5",
       border: "0.8px solid #d6dbf5",
     };

@@ -41,11 +41,11 @@ export default function Quiz(props) {
     // console.log(selectedAnswer);
 
     const updatedData = answersData.map((data) => {
-      return data.answer == selectedAnswerText
+      return decode(data.answer) == selectedAnswerText
         ? { ...data, isSelected: !data.isSelected }
-        : data;
+        : { ...data, isSelected: false };
     });
-    // console.log(updatedData);
+    setAnswersData(updatedData);
   };
 
   return (
