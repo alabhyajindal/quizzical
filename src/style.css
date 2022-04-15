@@ -52,11 +52,15 @@ body {
   align-items: center;
 }
 
-/* QA */
+/* Quiz */
 
 .qa-hr {
   color: #f5f7fb;
   outline: none;
   height: 0.8px;
   width: 400px;
+}
+
+.answers-cont {
+  display: flex;
 }

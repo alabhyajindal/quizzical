@@ -1,4 +1,4 @@
-[
+export const DATA = [
   {
     category: "Entertainment: Books",
     type: "multiple",
