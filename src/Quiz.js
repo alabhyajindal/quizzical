@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { nanoid } from "nanoid";
 import Question from "./components/Question";
+import AnswerOption from "./components/AnswerOption";
 
 export default function Quiz() {
-  // const [error, setError] = useState(null);
-  // const [isLoaded, setIsLoaded] = useState(false);
   const [quizData, setQuizData] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,10 @@ export default function Quiz() {
   return (
     <div>
       {quizData.map((data) => (
-        <Question ques={decodeHtml(data.question)} />
+        <div key={nanoid()}>
+          <Question ques={decodeHtml(data.question)} />
+          <AnswerOption ca={data.correct_answer} />
+        </div>
       ))}
     </div>
   );
