@@ -2,6 +2,7 @@ import React from "react";
 import Quiz from "./Quiz";
 import "./style.css";
 import { DATA } from "./DATA";
+import { nanoid } from "nanoid";
 
 export default function App() {
   // Enabling useEffect and replacing Data with quizData in the render method will replace the data file with the data coming in from the API
@@ -18,8 +19,9 @@ export default function App() {
   return (
     <main className="main">
       {DATA.map((data) => {
-        return <Quiz data={data} />;
+        return <Quiz key={nanoid()} data={data} />;
       })}
+      <button className="check">Check answers</button>
     </main>
   );
 }

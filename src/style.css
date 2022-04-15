@@ -19,6 +19,21 @@ body {
   margin-top: 40px;
 }
 
+.check {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  background-color: #4d5b9e;
+  width: 120px;
+  height: 35px;
+  border-radius: 10px;
+
+  color: #f5f7fb;
+  font-weight: 600;
+  font-size: 11px;
+}
+
 /* Question */
 
 .question {
@@ -33,7 +48,7 @@ body {
 .answer-option {
   background: none;
   border-radius: 8px;
-  max-width: 80px;
+  max-width: 100px;
   height: auto;
   padding: 0.5rem;
 
@@ -52,6 +67,12 @@ body {
   align-items: center;
 }
 
+.answer-option-selected {
+  color: #293264;
+  background-color: #d6dbf5;
+  border: 0.8px solid #d6dbf5;
+}
+
 /* Quiz */
 
 .quiz {
@@ -65,8 +86,10 @@ body {
   color: #f5f7fb;
   outline: none;
   height: 0.8px;
-  width: 700px;
+  width: 400px;
 }
+
+/* Answers */
 
 .answers-cont {
   display: flex;

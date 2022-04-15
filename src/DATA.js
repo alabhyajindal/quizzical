@@ -1,50 +1,65 @@
 export const DATA = [
   {
-    category: "History",
+    category: "Entertainment: Cartoon & Animations",
     type: "multiple",
     difficulty: "medium",
     question:
-      "When was the United States National Security Agency established?",
-    correct_answer: "November 4, 1952",
-    incorrect_answers: ["July 26, 1908", " July 1, 1973", " November 25, 2002"],
+      "In &quot;SpongeBob SquarePants&quot;, what is the name of Sandy Cheek&#039;s place of residence?",
+    correct_answer: "Sandy&#039;s Treedome",
+    incorrect_answers: [
+      "&quot;The Dome&quot;",
+      "Sandy&#039;s Bubble",
+      "Auquatic Reseach Centre",
+    ],
   },
   {
-    category: "Politics",
+    category: "Entertainment: Japanese Anime & Manga",
     type: "multiple",
     difficulty: "medium",
-    question:
-      "Due to the Nagoya Resolution, China agreed to allow Taiwan to compete separately in international sporting events under what name?",
-    correct_answer: "Chinese Taipei",
+    question: "Who is the creator of the manga series &quot;One Piece&quot;?",
+    correct_answer: "Eiichiro Oda",
     incorrect_answers: [
-      "Chinese Taiwan",
-      "Republic of Taiwan",
-      "Republic of Taipei ",
+      "Yoshihiro Togashi",
+      "Hayao Miyazaki",
+      "Masashi Kishimoto",
     ],
   },
   {
     category: "Entertainment: Video Games",
     type: "multiple",
-    difficulty: "easy",
-    question:
-      "Which of these is NOT a playable character in the 2016 video game Overwatch?",
-    correct_answer: "Invoker",
-    incorrect_answers: ["Mercy", "Winston", "Zenyatta"],
+    difficulty: "hard",
+    question: "In 2004, which person(s) created &quot;Roblox&quot;?",
+    correct_answer: "David Baszucki and Erik Cassel",
+    incorrect_answers: [
+      "Erik Cassel",
+      "Jonas Alto and Sarah Smith",
+      "James Kolein",
+    ],
   },
   {
-    category: "History",
+    category: "Entertainment: Video Games",
     type: "multiple",
-    difficulty: "easy",
+    difficulty: "medium",
     question:
-      "Which modern day country is the region that was known as Phrygia in ancient times?",
-    correct_answer: "Turkey",
-    incorrect_answers: ["Syria", "Greece", "Egypt"],
+      "Which of the following is a character in the video game Destiny?",
+    correct_answer: "Cayde-6",
+    incorrect_answers: [
+      "Ostrava of Boletaria",
+      "Mordecai the Hunter",
+      "Leon S. Kennedy",
+    ],
   },
   {
-    category: "Entertainment: Film",
+    category: "Science & Nature",
     type: "multiple",
     difficulty: "hard",
-    question: "In the Friday The 13th series, what year did Jason drown in?",
-    correct_answer: "1957",
-    incorrect_answers: ["1955", "1953", "1959"],
+    question:
+      "In physics, conservation of energy and conservation of momentum are both consequences of which of the following?",
+    correct_answer: "Noether&#039;s Theorem",
+    incorrect_answers: [
+      "Bell&#039;s Theorem",
+      "Wick&#039;s Theorem",
+      "Carnot&#039;s Theorem",
+    ],
   },
 ];
