@@ -22,12 +22,18 @@ export default function Quiz() {
 
   return (
     <div>
-      {quizData.map((data) => (
-        <div key={nanoid()}>
-          <Question ques={decodeHtml(data.question)} />
-          <AnswerOption ca={data.correct_answer} />
-        </div>
-      ))}
+      {quizData.map((data, index) => {
+        return (
+          <div key={nanoid()}>
+            <Question ques={decodeHtml(data.question)} />
+            <AnswerOption ans={data.correct_answer} />
+          </div>
+        );
+      })}
     </div>
   );
 }
+
+// Create an array of answers - which has both the correct answer and the incorrect answers
+// Randomize the order of the array - so that the correct answer is not in the same place always
+// Map over the answers array and render them below <Question />
