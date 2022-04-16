@@ -1,20 +1,22 @@
-import React from "react";
-import { decode } from "../Quiz";
+import React from 'react';
+import { decode } from '../Quiz';
 
 export default function AnswerOption(props) {
   let styles;
-  if (props.individualData.isSelected) {
+  if (!props.checkAnswers && props.individualData.isSelected) {
     styles = {
-      backgroundColor: "#d6dbf5",
-      border: "0.8px solid #d6dbf5",
+      backgroundColor: '#d6dbf5',
+      border: '0.8px solid #d6dbf5',
+    };
+  } else if (props.checkAnswers && props.individualData.isCorrect) {
+    styles = {
+      backgroundColor: 'lightgreen',
     };
   }
 
-  // console.log(props.individualData);
-
   return (
     <button
-      className="answer-option"
+      className='answer-option'
       style={styles}
       onClick={props.selectAnswer}
     >

@@ -67,6 +67,10 @@ body {
   align-items: center;
 }
 
+.answer-option:focus {
+  outline: none;
+}
+
 .answer-option-selected {
   color: #293264;
   background-color: #d6dbf5;

@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { nanoid } from "nanoid";
-import Question from "./components/Question";
-import Answers from "./components/Answers";
+import React, { useEffect, useState } from 'react';
+import { nanoid } from 'nanoid';
+import Question from './components/Question';
+import Answers from './components/Answers';
 // Named export
 export const decode = function (html) {
-  const txt = document.createElement("textarea");
+  const txt = document.createElement('textarea');
   txt.innerHTML = html;
   return txt.value;
 };
 
 // Default export of the component
 export default function Quiz(props) {
+  // State of answers' data which is passed down to components
   const [answersData, setAnswersData] = useState(computeAnswers());
 
   // Using function declaration rather than expression since this can be used for setting state
@@ -34,29 +35,31 @@ export default function Quiz(props) {
     return answerObjects;
   }
 
-  // onClick handler for selecting answers
+  // Function for selecting answers
   const selectAnswer = function (e) {
-    const selectedAnswer = e.target;
-    const selectedAnswerText = e.target.innerHTML;
-    // console.log(selectedAnswer);
+    if (!props.checkAnswers) {
+      const selectedAnswer = e.target;
+      const selectedAnswerText = e.target.innerHTML;
 
-    const updatedData = answersData.map((data) => {
-      return decode(data.answer) == selectedAnswerText
-        ? { ...data, isSelected: !data.isSelected }
-        : { ...data, isSelected: false };
-    });
-    setAnswersData(updatedData);
+      let updatedData = answersData.map((data) => {
+        return decode(data.answer) === selectedAnswerText
+          ? { ...data, isSelected: !data.isSelected }
+          : { ...data, isSelected: false };
+      });
+      setAnswersData(updatedData);
+    }
   };
 
   return (
-    <div className="quiz">
+    <div className='quiz'>
       <Question question={decode(props.data.question)} />
       <Answers
-        className="answers-cont"
+        className='answers-cont'
         answersData={answersData}
         selectAnswer={selectAnswer}
+        checkAnswers={props.checkAnswers}
       />
-      <hr className="divider" />
+      <hr className='divider' />
     </div>
   );
 }
