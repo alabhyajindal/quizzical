@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { nanoid } from 'nanoid';
+import React, { useState } from 'react';
 import Question from './components/Question';
 import Answers from './components/Answers';
 // Named export
@@ -38,7 +37,7 @@ export default function Quiz(props) {
   // Function for selecting answers
   const selectAnswer = function (e) {
     if (!props.checkAnswers) {
-      const selectedAnswer = e.target;
+      // const selectedAnswer = e.target;
       const selectedAnswerText = e.target.innerHTML;
 
       let updatedData = answersData.map((data) => {

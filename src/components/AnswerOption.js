@@ -8,7 +8,7 @@ export default function AnswerOption(props) {
       backgroundColor: '#d6dbf5',
       border: '0.8px solid #d6dbf5',
     };
-  } else if (props.checkAnswers && props.individualData.isCorrect) {
+  } else if (props.checkAnswers && props.individualData.isSelected) {
     styles = {
       backgroundColor: 'lightgreen',
     };
