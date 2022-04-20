@@ -1,5 +1,5 @@
 import React from 'react';
-import { decode } from '../Quiz';
+import { decode } from '../App';
 
 export default function AnswerOption(props) {
   let styles;
