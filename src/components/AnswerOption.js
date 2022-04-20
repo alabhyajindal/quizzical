@@ -15,6 +15,7 @@ export default function AnswerOption(props) {
   ) {
     styles = {
       backgroundColor: '#94D7A2',
+      cursor: 'auto',
     };
   } else if (
     props.checkAnswers &&
@@ -24,6 +25,11 @@ export default function AnswerOption(props) {
     styles = {
       backgroundColor: '#F8BCBC',
       opacity: '0.5',
+      cursor: 'auto',
+    };
+  } else if (props.checkAnswers) {
+    styles = {
+      cursor: 'auto',
     };
   }
 

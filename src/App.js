@@ -39,7 +39,7 @@ export default function App() {
     const allAnswers = [];
     DATA.map((data) =>
       data.incorrect_answers.forEach((answer, index) => {
-        allAnswers.push(decode(answer));
+        allAnswers.push(answer);
         index == 2 && allAnswers.push(decode(data.correct_answer));
       })
     );
@@ -58,7 +58,6 @@ export default function App() {
     answerObjects[11].isCorrect = true;
     answerObjects[15].isCorrect = true;
     answerObjects[19].isCorrect = true;
-    console.log(answerObjects);
     return answerObjects;
   }
 
@@ -77,7 +76,6 @@ export default function App() {
     }
   };
 
-  // console.log(answersData.slice(0, 4));
   let start = 0;
 
   return (
