@@ -31,6 +31,7 @@ export default function App() {
   // Function to show the result of the answers selected by the users
   const displayResults = function () {
     setCheckAnswers((prevState) => !prevState);
+    // !checkAnswers && setAnswersData(computeAnswers());
   };
 
   // Using function declaration rather than expression since this can be used for setting state
@@ -53,6 +54,11 @@ export default function App() {
       });
     });
     answerObjects[3].isCorrect = true;
+    answerObjects[7].isCorrect = true;
+    answerObjects[11].isCorrect = true;
+    answerObjects[15].isCorrect = true;
+    answerObjects[19].isCorrect = true;
+    console.log(answerObjects);
     return answerObjects;
   }
 
@@ -65,22 +71,26 @@ export default function App() {
       let updatedData = answersData.map((data) => {
         return decode(data.answer) === selectedAnswerText
           ? { ...data, isSelected: !data.isSelected }
-          : { ...data, isSelected: false };
+          : { ...data };
       });
       setAnswersData(updatedData);
     }
   };
 
+  // console.log(answersData.slice(0, 4));
+  let start = 0;
+
   return (
     <main className='main'>
-      {DATA.map((data) => {
-        // console.log(data);
+      {DATA.map((data, index) => {
+        start += index !== 0 && 4;
+        let end = start + 4;
         return (
           <Quiz
             key={nanoid()}
             data={data}
             checkAnswers={checkAnswers}
-            answersData={answersData}
+            answersData={answersData.slice(start, end)}
             selectAnswer={selectAnswer}
           />
         );

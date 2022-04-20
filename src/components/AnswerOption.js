@@ -8,9 +8,22 @@ export default function AnswerOption(props) {
       backgroundColor: '#d6dbf5',
       border: '0.8px solid #d6dbf5',
     };
-  } else if (props.checkAnswers && props.individualData.isSelected) {
+  } else if (
+    props.checkAnswers &&
+    props.individualData.isSelected &&
+    props.individualData.isCorrect
+  ) {
     styles = {
-      backgroundColor: 'lightgreen',
+      backgroundColor: '#94D7A2',
+    };
+  } else if (
+    props.checkAnswers &&
+    props.individualData.isSelected &&
+    !props.individualData.isCorrect
+  ) {
+    styles = {
+      backgroundColor: '#F8BCBC',
+      opacity: '0.5',
     };
   }
 

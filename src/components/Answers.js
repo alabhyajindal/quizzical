@@ -5,6 +5,7 @@ import { nanoid } from 'nanoid';
 export default function Answers(props) {
   let answerElements;
   answerElements = props.answersData.map((answers) => {
+    // console.log(answers);
     return (
       <AnswerOption
         key={nanoid()}
